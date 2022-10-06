@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+   
+
+        <div class="repeat">
+
+            Message:
+        <input v-model="message" placeholder="Enter your message">
+        How many times to repeat:
+        <input v-model="repeatNu" placeholder="Enter how many times to repeat">
+        <button  @click="repeatResult(message, repeatNu)"> Do it! </button>
+        <p  v-if="repeatNu < 0" > {{repeatNu}} | Must be a positive number! </p>
+        <p >{{result}}</p>
+        
+        </div>
+
+        <!-- <div class="repeat">
+
+            Message:
+        <input v-model="message" placeholder="Enter your message">
+        How many times to repeat:
+        <input v-model="repeatNu" placeholder="Enter how many times to repeat">
+        <button  @click="repeatResult2()"> DO it! </button>
+        <p  v-if="repeatNu < 0" > {{repeatNu2}} | Must be a positive number! </p>
+        <p >{{result}}</p>
+
+        </div> -->
+
+        
+
+        
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
